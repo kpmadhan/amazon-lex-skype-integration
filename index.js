@@ -39,7 +39,7 @@ var bot = new builder.UniversalBot(connector, function (session) {
 			botAlias: process.env.BOT_ALIAS,
 			botName: process.env.BOT_NAME,
 			inputText: session.message.text,
-			userId: session.message.user.id,
+			userId: (session.message.user.id).split('@')[0],
 			sessionAttributes: {
 			}
 		};
